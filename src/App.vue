@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-      <tab line-width="2">
+    <!-- line-width 是number类型 -->
+      <tab :line-width=2> 
        <tab-item selected @on-item-click="onItemClick">已发货</tab-item>
        <tab-item @on-item-click="onItemClick">未发货</tab-item>
        <tab-item @on-item-click="onItemClick">全部订单</tab-item>
      </tab>
-    <tab bar-active-color="red" :line-width="1">
+    <tab bar-active-color="red" :line-width=4>
       <tab-item>已发货</tab-item>
       <tab-item selected>未发货</tab-item>
       <tab-item>全部订单</tab-item>
@@ -40,7 +41,7 @@ export default {
   }
 }
 </script>
- 
+
 <style lang="scss">
 body , html{
   padding: 0;
